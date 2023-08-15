@@ -44,7 +44,7 @@ class ColorExtractor:
         predominant_colors_hex = []
         for color in predominant_colors_rgb:
             hex_color = self._format_hex(color)
-            predominant_colors_hex.append(hex_color)
+            predominant_colors_hex.append(hex_color.upper())
 
         return {"palette": predominant_colors_hex}
 
