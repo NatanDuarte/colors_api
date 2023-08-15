@@ -1,0 +1,61 @@
+# Colors API - create color palette from images
+
+![example image](./images/example.png)
+
+The image above is an example of usage for the application.
+And this is how the output looks like:
+
+```json
+{
+  "palette": [
+    "#312212",
+    "#876e51",
+    "#ada081",
+    "#5c492f",
+    "#cecbbc"
+  ]
+}
+```
+
+## How to run
+
+I'm using `poetry` as package manager for this application.
+
+1) first install the dependencies
+
+    ```shell
+    poetry install
+    ```
+
+2) then run the project in `poetry shell`:
+
+    ```shell
+    uvicorn --reload colors_api.api:app
+    ```
+
+## Endpoints
+
+Once the application is running, you can browse to
+`http://localhost:8000/docs` and learn more about the endpoints.
+
+Until now, we have:
+
+- /healthcheck - checks if the API is running
+- /colors?n_colors - extract a given number of colors from a
+given image and return a list of hex colors.
+
+## What I studied/learned with this project
+
+- [x] TDD
+- [x] FastAPI
+- [x] Color segmentation with OpenCV and the *Kmeans algorithm*
+- [x] Image upload
+
+### For future versions
+
+Features I want to implement:
+
+- [ ] User authentication
+- [ ] Request rate limits
+- [ ] Database integration
+- [ ] Metadata collection
