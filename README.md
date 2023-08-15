@@ -9,10 +9,10 @@ And this is how the output looks like:
 {
   "palette": [
     "#312212",
-    "#876e51",
-    "#ada081",
-    "#5c492f",
-    "#cecbbc"
+    "#876E51",
+    "#ADA081",
+    "#5C492F",
+    "#CECBBC"
   ]
 }
 ```
@@ -59,3 +59,5 @@ Features I want to implement:
 - [ ] Request rate limits
 - [ ] Database integration
 - [ ] Metadata collection
+- [ ] Limit image size
+- [ ] To have a different endpoint for really large images
