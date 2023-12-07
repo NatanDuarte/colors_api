@@ -1,0 +1,8 @@
+version: '3'
+services:
+  api:
+    build: .
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: ["uvicorn", "--reload", "colors_api.api:app"]
