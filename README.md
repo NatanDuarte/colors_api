@@ -21,6 +21,17 @@ And this is how the output looks like:
 
 I'm using `poetry` as package manager for this application.
 
+### Running with Docker
+
+Run the command:
+
+```shell
+docker compose up -d --build
+```
+
+<details>
+  <summary>Running manually</summary>
+
 1) first install the dependencies
 
     ```shell
@@ -30,13 +41,14 @@ I'm using `poetry` as package manager for this application.
 2) then run the project in `poetry shell`:
 
     ```shell
-    uvicorn --reload colors_api.api:app
+    uvicorn --reload colors_api.api:app --port 8101
     ```
+</details>
 
 ## Endpoints
 
 Once the application is running, you can browse to
-`http://localhost:8000/docs` and learn more about the endpoints.
+`http://localhost:8101/docs` and learn more about the endpoints.
 
 Until now, we have:
 
@@ -60,4 +72,4 @@ Features I want to implement:
 - [ ] Database integration
 - [ ] Metadata collection
 - [ ] Limit image size
-- [ ] To have a different endpoint for really large images
+- [ ] To have a different endpoint for really large images (async)
