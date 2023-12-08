@@ -4,5 +4,13 @@ services:
     build: .
     volumes:
       - .:/app
+    ports:
+      - 8101:8101
+    restart: always
     working_dir: /app
-    command: ["uvicorn", "--reload", "colors_api.api:app"]
+    command:
+      [
+        "poetry", "run", "uvicorn", "colors_api.api:app",
+        "--host", "0.0.0.0",
+        "--port", "8101"
+      ]
