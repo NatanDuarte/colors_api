@@ -41,14 +41,14 @@ docker compose up -d --build
 2) then run the project in `poetry shell`:
 
     ```shell
-    uvicorn --reload colors_api.api:app --port 8101
+    uvicorn --reload colors_api.api:app --port 10001
     ```
 </details>
 
 ## Endpoints
 
 Once the application is running, you can browse to
-`http://localhost:8101/docs` and learn more about the endpoints.
+`http://localhost:10001/docs` and learn more about the endpoints.
 
 Until now, we have:
 
